@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class inventoryChest : MonoBehaviour
+public class InventoryChest : MonoBehaviour
 {
     public Sprite openChest;
 
@@ -11,7 +11,7 @@ public class inventoryChest : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
 
-            if (collision.gameObject.GetComponent<playerInventorySistem>().hasKey == true)
+            if (collision.gameObject.GetComponent<playerInventorySystem>().hasKey == true)
             {
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = openChest;
             }
