@@ -7,6 +7,7 @@ TagManager:
   - Eatable
   - NextLevel
   - PreviousLevel
+  - key
   layers:
   - Default
   - TransparentFX
