@@ -6,12 +6,11 @@ using UnityEngine;
 public class playerInventorySystem : MonoBehaviour
 {
     public bool hasKey = false;
-    private void OnTriggerEnter2D(Collider2D collision)
+    public static playerInventorySystem Instance;
+    
+    void Awake()
     {
-        if (collision.gameObject.tag == "key")
-        {
-            hasKey = true;
-            Destroy(collision.gameObject);
-        }
+        Instance = this;
     }
+
 }

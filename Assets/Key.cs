@@ -6,6 +6,7 @@ public class Key : MonoBehaviour
 {
     public GameObject chest;
 
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player"))
@@ -14,5 +15,8 @@ public class Key : MonoBehaviour
             this.gameObject.SetActive(false);
 
         }
+
+
+
     }
 }
