@@ -12,6 +12,7 @@ public class Tuy : MonoBehaviour
     public Animator catAnim;
 
     public GameObject eButton;
+    public GameObject key;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -29,11 +30,23 @@ public class Tuy : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && portalopen)
         {
+            if(playerInventorySystem.Instance !=null)
+            {
+                playerInventorySystem.Instance.hasKey = true;
+            }
+            if (key!=null)
+            {
+                Destroy(key);
+            }
+            
             StartCoroutine(PortalGet());
             mouse.SetActive(true);
             camera.GetComponent<Animator>().SetTrigger("CameraZoomOut");
             catAnim.SetTrigger("Interact");
-            Destroy(eButton);
+            if (eButton != null)
+            {
+                Destroy(eButton);
+            }
         }
     }
 
