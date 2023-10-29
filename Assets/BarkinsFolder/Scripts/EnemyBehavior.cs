@@ -34,7 +34,7 @@ public class EnemyBehavior : MonoBehaviour
         }
         else
         {
-            enemySpeed = 25;
+            enemySpeed = 45;
         }
     }
 
