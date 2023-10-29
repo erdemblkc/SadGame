@@ -7,6 +7,8 @@ public class Interaction_Spawn : MonoBehaviour
     public GameObject cheese; // The cheese object attached to the tree
     private bool cheeseFalling = false;
 
+    public GameObject eButton;
+
     // GameObject mainsprite;
     //public Sprite agizacik;
 
@@ -31,6 +33,7 @@ public class Interaction_Spawn : MonoBehaviour
             StartCoroutine(DropCheese());
             //mainsprite.GetComponent<SpriteRenderer>().sprite = agizacik;
             catAnims.SetTrigger("Interact");
+            Destroy(eButton);
         }
     }
 
