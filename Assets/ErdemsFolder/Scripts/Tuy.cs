@@ -9,6 +9,8 @@ public class Tuy : MonoBehaviour
     public GameObject mouse;
     public GameObject camera;
 
+    public Animator catAnim;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -28,6 +30,7 @@ public class Tuy : MonoBehaviour
             StartCoroutine(PortalGet());
             mouse.SetActive(true);
             camera.GetComponent<Animator>().SetTrigger("CameraZoomOut");
+            catAnim.SetTrigger("Interact");
         }
     }
 

@@ -30,11 +30,11 @@ public class EnemyBehavior : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            enemySpeed = 30;
+            enemySpeed = 27;
         }
         else
         {
-            enemySpeed = 25;
+            enemySpeed = 23;
         }
     }
 

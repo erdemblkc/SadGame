@@ -7,8 +7,10 @@ public class Interaction_Spawn : MonoBehaviour
     public GameObject cheese; // The cheese object attached to the tree
     private bool cheeseFalling = false;
 
-    public GameObject mainsprite;
-    public Sprite agizacik;
+    // GameObject mainsprite;
+    //public Sprite agizacik;
+
+    public Animator catAnims;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,6 +30,7 @@ public class Interaction_Spawn : MonoBehaviour
         {
             StartCoroutine(DropCheese());
             //mainsprite.GetComponent<SpriteRenderer>().sprite = agizacik;
+            catAnims.SetTrigger("Interact");
         }
     }
 
